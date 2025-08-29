@@ -1,0 +1,16 @@
+services:
+  terraform:
+    image: hashicorp/terraform:1.6.2
+    container_name: terraform
+    volumes:
+      - ./setup:/tf/setup
+      - ./deploy:/tf/deploy
+    working_dir: /tf
+#the following env details are got from aws-vault 
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
+      - AWS_DEFAULT_REGION=eu-central-1
+      - TF_WORKSPACE=${TF_WORKSPACE}
+    
