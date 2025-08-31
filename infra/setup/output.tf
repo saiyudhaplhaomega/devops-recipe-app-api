@@ -11,3 +11,13 @@ output "cd_user_access_key_secret" {
   sensitive   = true
 
 }
+
+output "ecr_repo_app" {
+  description = "ECR reppository URL for app image"
+  value       = aws_ecr_repository.app.repository_url
+}
+
+output "ecr_repo_proxy" {
+  description = "ECR reppository for URL for proxy image"
+  value       = aws_ecr_repository.proxy.repository_url
+}

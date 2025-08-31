@@ -73,3 +73,44 @@ resource "aws_iam_user_policy_attachment" "tf_backend" {
 
 #now we will define outputs to get the access key and secret key
 # which we doing in a seperate file outputs.tf
+
+#########################
+# Policy for ECR access #
+#########################
+
+# when we build jobs in github actions we are going to run a job and push to docker images
+# authentication to ecr and push the images
+data "aws_iam_policy_document" "ecr" {
+  statement {
+    effect    = "Allow"
+    actions   = ["ecr:GetAuthorizationToken"]
+    resources = ["*"]
+  }
+
+  statement {
+    effect = "Allow"
+    actions = [
+      "ecr:CompleteLayerUpload",
+      "ecr:UploadLayerPart",
+      "ecr:InitiateLayerUpload",
+      "ecr:BatchCheckLayerAvailability",
+      "ecr:PutImage"
+    ]
+    # get arn of app and proxy ecr repository from ecr.tf
+    resources = [
+      aws_ecr_repository.app.arn,
+      aws_ecr_repository.proxy.arn,
+    ]
+  }
+}
+# create resource for the policy
+resource "aws_iam_policy" "ecr" {
+  name        = "${aws_iam_user.cd.name}-ecr"
+  description = "Allow user to manage ECR resources"
+  policy      = data.aws_iam_policy_document.ecr.json
+}
+#attaches teh policy to the user
+resource "aws_iam_user_policy_attachment" "ecr" {
+  user       = aws_iam_user.cd.name
+  policy_arn = aws_iam_policy.ecr.arn
+}
