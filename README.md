@@ -1,8 +1,8 @@
-# DevOps Deployment Automation with Terraform, AWS and Docker - Starter Code
+# DevOps Deployment Automation with Terraform, AWS and Docker 
 
-This project contains the starter code for our course: [DevOps Deployment Automation with Terraform, AWS and Docker](https://londonapp.dev/c3).
+This starter code of the applicaition for this project is here: [DevOps Deployment Automation with Terraform, AWS and Docker](https://londonapp.dev/c3).
 
-It contains the code you should have by the end of our [Build a Backend REST API with Python & Django REST Framework - Advanced](https://londonapp.dev/c2) course. We've created this snapshot, in-case we update the aforementioned course in the future.
+It contains the code you should have by the end of our [Build a Backend REST API with Python & Django REST Framework - Advanced](https://londonapp.dev/c2) course. Snapshots exist here too.
 
 ## Local Development
 
@@ -199,5 +199,5 @@ git config --global user.name "User Name"
 git config --global push.autoSetupRemote true
 ```
 
-## Other courses
+## Other resources
 
