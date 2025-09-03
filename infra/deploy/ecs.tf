@@ -3,10 +3,10 @@
 ##
 
 ### saiyudh editing from here ###
-resource "aws_iam_service_linked_role" "ecs" {
-  aws_service_name = "ecs.amazonaws.com"
-  description      = "Service-linked role required for ECS services"
-}
+#resource "aws_iam_service_linked_role" "ecs" {
+#  aws_service_name = "ecs.amazonaws.com"
+#  description      = "Service-linked role required for ECS services"
+#}
 ## upto here #####
 resource "aws_iam_policy" "task_execution_role_policy" {
   name        = "${local.prefix}-task-exec-role-policy"
@@ -219,5 +219,5 @@ resource "aws_ecs_service" "api" {
 
     security_groups = [aws_security_group.ecs_service.id]
   }
-  depends_on = [aws_iam_service_linked_role.ecs] # ensures ECS role exists
+  #depends_on = [aws_iam_service_linked_role.ecs] # ensures ECS role exists
 }
