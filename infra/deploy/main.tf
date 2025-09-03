@@ -16,7 +16,7 @@ terraform {
     dynamodb_table       = "devops-recipe-app-api-tf-lock"
   }
 }
-# Configure the AWS provider a
+# Configure the AWS provider aa
 provider "aws" {
   region = "eu-central-1"
 
