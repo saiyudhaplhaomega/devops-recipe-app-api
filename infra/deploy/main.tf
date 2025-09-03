@@ -16,7 +16,7 @@ terraform {
     dynamodb_table       = "devops-recipe-app-api-tf-lock"
   }
 }
-# Configure the AWS provider
+# Configure the AWS provider a
 provider "aws" {
   region = "eu-central-1"
 
@@ -33,5 +33,5 @@ provider "aws" {
 locals {
   prefix = "${var.prefix}-${terraform.workspace}"
 }
-# Get the current AWS region
+# Get the current AWS region a
 data "aws_region" "current" {}
