@@ -4,7 +4,7 @@
 
 ### saiyudh editing from here ###
 resource "aws_iam_service_linked_role" "ecs" {
-  aws_service_name = "ecs.amazonaws.com"
+  aws_service_name = "${local.prefix}-iam-service-linked-role"
   description      = "Service-linked role required for ECS services"
 }
 ## upto here #####
