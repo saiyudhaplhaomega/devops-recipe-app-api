@@ -15,7 +15,7 @@ resource "aws_db_subnet_group" "main" {
 }
 
 # security group that is going to allow access to the RDS database instance.
-# We've given it a description and a name which allow us to find it in AWS.a
+# We've given it a description and a name which allow us to find it in AWS.
 # We've put it in our VPC, which we are using as our main VPC.
 # And then we're allowing ingress access via the protocol TCP on port 5432. Port 5432 is the default port for Postgres databases.
 resource "aws_security_group" "rds" {
