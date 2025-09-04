@@ -160,6 +160,11 @@ data "aws_iam_policy_document" "ec2" {
       "ec2:AttachInternetGateway",
       "ec2:ModifyVpcAttribute",
       "ec2:RevokeSecurityGroupIngress",
+      # ✅ ADD THESE ChatgPT suggested
+      "ec2:DescribeAccountAttributes",
+      "ec2:DescribeAddresses",
+      "ec2:DescribeVpcPeeringConnections",
+      "ec2:DescribeClassicLinkInstances",
     ]
     resources = ["*"]
   }
