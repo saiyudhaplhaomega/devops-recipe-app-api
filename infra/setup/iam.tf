@@ -348,7 +348,9 @@ data "aws_iam_policy_document" "elb" {
       "elasticloadbalancing:CreateTargetGroup",
       "elasticloadbalancing:AddTags",
       "elasticloadbalancing:DescribeTags",
-      "elasticloadbalancing:ModifyListener"
+      "elasticloadbalancing:ModifyListener",
+      # ✅ missing one CHATGPT suggested
+      "elasticloadbalancing:DescribeListenerAttributes"
     ]
     resources = ["*"]
   }
