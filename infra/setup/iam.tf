@@ -300,6 +300,7 @@ data "aws_iam_policy_document" "logs" {
       "logs:DescribeLogGroups",
       "logs:CreateLogGroup",
       "logs:TagResource",
+      "logs:ListTagsForResource",
       "logs:ListTagsLogGroup"
     ]
     resources = ["*"]
