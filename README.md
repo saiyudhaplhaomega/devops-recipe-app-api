@@ -1,10 +1,8 @@
 # 🚀 DevOps Deployment Automation with Terraform, AWS, and Docker  
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/your-username/your-repo/ci.yml?branch=main)](https://github.com/your-username/your-repo/actions)  
-[![Docker Pulls](https://img.shields.io/docker/pulls/your-dockerhub-username/your-image)](https://hub.docker.com/r/your-dockerhub-username/your-image)  
 ![Terraform](https://img.shields.io/badge/Terraform-v1.5+-blueviolet)  
-![AWS](https://img.shields.io/badge/AWS-ECS%20%7C%20ECR%20%7C%20RDS-orange)  
-![License](https://img.shields.io/github/license/your-username/your-repo)  
+![AWS](https://img.shields.io/badge/AWS-ECS%20%7C%20ECR%20%7C%20RDS%20%7C%20EFS%20%7C%20VPC%20%7C%20S3%20%7C%20Route53%20%7C%20CloudWatch%20%7C%20DynamoDB%20%7C%20ACM-orange)  
+ 
 
 This repository demonstrates **end-to-end DevOps automation** using **Terraform**, **AWS ECS**, **Docker**, and **CI/CD pipelines** with GitHub/GitLab. It covers local development, infrastructure as code (IaC), automated deployments, and production-ready principles.  
 
